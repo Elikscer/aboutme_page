@@ -91,6 +91,7 @@ a:hover{
 }
 #personal-interests {
 	margin: auto;
+	margin-top: 0px;
 	grid-column-start: 1;
 	grid-column-end: 2;
 	grid-row-start: 4;
