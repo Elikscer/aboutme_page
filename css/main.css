@@ -2,17 +2,100 @@
 /* WARNING-Please do not copy/paste any of this code.  You may utilize the concepts here 
 but I don't want to see a bunch of assignments with the exact layout, class names etc.  
 Type every line of code yourself!  Make the assignment your own.*/
+html {
+	background-color: #303847;
+	background-image: linear-gradient(to bottom right, #303847, #8a8c83);
+}
 body{
 	/*border-box style of box-sizing makes it so both width and padding of a block element are included
 	in the total width of the element.  This is preferred going forward */
 	box-sizing: border-box;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: #d0d1cd;
+}
+main {
+	display: grid;
+	grid-template-columns: 3;
+	grid-template-rows: 6;
 }
 .res-section {
-	color:black;
 	/*Project 2-use this css rule to format each 'section' tag with 'res-section' class assigned */
+	display: block;
+	background-color: #1a2430;
+	border: 5px solid #96988f;
+	padding: 5px 15px;
+	margin: 5px;
+	border-radius: 15px;
+	width: 350px;
+	box-shadow: 0px 2px 2px #303847, 0px 0px 5px #303847;
 }
-/*------------------Template Above, My Code Below------------------*/
-
+h1 {
+	text-align: center;
+	margin: auto;
+	padding: 10px 10px 20px 10px;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	color: #d0d1cd;
+}
 img {
+	border: 5px solid #96988f;
+	box-shadow: 0px 2px 2px #303847, 0px 0px 5px #303847;
+}
+#portrait {
+	margin: auto;
+	margin-top: 20px;
 	border-radius: 50%;
+	background-color: #1a2430;
+	grid-column-start: 1;
+  	grid-column-end: 2;
+  	grid-row-start: 2;
+  	grid-row-end: 4;
+}
+#center-info {
+	margin: auto;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 4;
+}
+#center-info h2 {
+	text-align: center;
+}
+#poem-text {
+	text-align: center;
+}
+#cat {
+	text-align: center;
+	margin: auto;
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 3;
+}
+#cat img {
+	width: 200px;
+	border-radius: 15px;
+}
+#cat p {
+	width: 300px;
+}
+a {
+	color: #7892ad;
+	text-decoration: none;
+}
+a:hover{
+	color: #99bde2;
+}
+#personal-interests {
+	margin: auto;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 4;
+	grid-row-end: 5;
+	width: 500px;
+}
+#personal-interests h2{
+	text-align: center;
 }
