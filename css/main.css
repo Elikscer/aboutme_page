@@ -1,14 +1,8 @@
-
-/* WARNING-Please do not copy/paste any of this code.  You may utilize the concepts here 
-but I don't want to see a bunch of assignments with the exact layout, class names etc.  
-Type every line of code yourself!  Make the assignment your own.*/
 html {
 	background-color: #303847;
 	background-image: linear-gradient(to bottom right, #303847, #8a8c83);
 }
 body{
-	/*border-box style of box-sizing makes it so both width and padding of a block element are included
-	in the total width of the element.  This is preferred going forward */
 	box-sizing: border-box;
 	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	color: #d0d1cd;
@@ -16,10 +10,9 @@ body{
 main {
 	display: grid;
 	grid-template-columns: 3;
-	grid-template-rows: 4;
+	grid-template-rows: 5;
 }
 .res-section {
-	/*Project 2-use this css rule to format each 'section' tag with 'res-section' class assigned */
 	display: block;
 	background-color: #1a2430;
 	border: 5px solid #96988f;
@@ -94,8 +87,8 @@ a:hover{
 	margin-top: 0px;
 	grid-column-start: 1;
 	grid-column-end: 2;
-	grid-row-start: 4;
-	grid-row-end: 5;
+	grid-row-start: 5;
+	grid-row-end: 6;
 	width: 500px;
 	display: block;
 }
@@ -111,8 +104,8 @@ a:hover{
 	width: auto;
 	grid-column-start: 2;
 	grid-column-end: 4;
-	grid-row-start: 4;
-	grid-row-end: 5;
+	grid-row-start: 5;
+	grid-row-end: 6;
 }
 #class-schedule th {
 	width: 20px;
@@ -139,4 +132,15 @@ td.CS2550 {
 }
 td.CS1410 {
 	background-color: #8A7453;
+}
+td.Valorant {
+	background-color: #85453C;
+}
+#separator {
+	grid-row-start: 4;
+	grid-row-end: 5;
+	grid-column-start: 1;
+	grid-column-end: 4;
+	width: 100%;
+	height: 20px;
 }

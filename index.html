@@ -16,42 +16,20 @@ in a zero grade, a permanent record on file and possibly immediate failure of th
  
 -->   
 <html lang="en">
-<!-- Project 1/2 Layout Starter Page -->
-<!-- WARNING-Please do not copy/paste any of this code.  You may utilize the concepts here 
-but I don't want to see a bunch of assignments with the exact layout, class names etc.  
-Type every line of code yourself!  Change the names, be creative, make the assignment your own!
-
-TRICK:  select all text in this file, 'Ctrl-A', then use 'Alt-Shift-f' to format your document with proper indents etc.
--->
-
 <head>
-	<!--  This is the 'head' tag, DON'T confuse with 'header'.  This tag does not get rendered and
-	should not contain any of your page content.  It just includes CSS/JS and the 'title' displayed on the
-	browser tab-->
 	<title>About Eli Durfee</title>
 	<meta charset="utf-8">
 	<style>
-		/* place inline styles here-Project 2*/
 	</style>
-	<!-- Or, include your styles in a separate css file as follows (project 2): -->
 	<link rel="stylesheet" href="css/main.css" />
 </head>
-
 <body>
-
 	<main>
-		<!--  I normally put header and footer outside of 'main', but in this
-		case when I'm centering it all, placing inside 'main' makes sense
-		-->
 		<header>
 			<h1>Eli Durfee | CS-2550-X01 | About Me</h1>
 		</header>
-
-		<!-- example of image.  mine is too big, you might need to set height/width attributes to fix-->
 		<img src="img/portrait.jpg" alt="Portrait of Eli Durfee" id="portrait">
-
 		<div id='center-info'>
-			<!-- (Project2)When repeating your sections,  create a class for each one and style each section through that class -->
 			<section class='res-section'>
 				<h2>Personal Info</h2>
 				<ul>
@@ -61,7 +39,6 @@ TRICK:  select all text in this file, 'Ctrl-A', then use 'Alt-Shift-f' to format
 					<li><b>Favorite Ice Cream Flavor:</b> Goat's Milk</li>
 				</ul>
 			</section>
-
 			<section class='res-section'>
 				<h2>My Five Favorite Books</h2>
 				<ol>
@@ -72,7 +49,6 @@ TRICK:  select all text in this file, 'Ctrl-A', then use 'Alt-Shift-f' to format
 					<li><i>Frankenstein</i>, <a href="http://shelleygodwinarchive.org">Mary Shelley</a></li>
 				</ol>
 			</section>
-
 			<section class='res-section'>
 				<h2>Resilience: A Haiku</h2>
 				<p id="poem-text"><i>The yielding tree bends<br>
@@ -89,6 +65,7 @@ TRICK:  select all text in this file, 'Ctrl-A', then use 'Alt-Shift-f' to format
 		<section class="res-section" id="fun-fact">
 			<p><b>Fun Fact:</b> I have a Commercial Driver's License</p>
 		</section>
+		<div id="separator"></div>
 		<section class="res-section" id="personal-interests">
 			<h2>My Personal Interests</h2>
 			<p>I thoroughly enjoy video games of many varieties, and very likely spend more time gaming than is healthy.  My favorite games generally fall into the genres of RPG (Role-Playing Game), MOBA (Multiplayer Online Battle Arena), and Strategy/Puzzle.  My favorite RPG is either Skyrim or Cyperpunk 2077, my favorite MOBA is League of Legends, and my favorite puzzle game is Portal 2.  I've been playing a lot of Valorant lately as well, which, as an FPS (First-Person Shooter) is a bit unusual for me... but it's been a lot of fun.  I also play board games with my friends, and card games such as Magic: The Gathering or Flesh & Blood.</p>
@@ -107,47 +84,52 @@ TRICK:  select all text in this file, 'Ctrl-A', then use 'Alt-Shift-f' to format
 				</tr>
 				<tr>
 					<th class="time-slot">16:00</th>
-					<td rowspan="2" class="CS2550">CS-2550</td>
+					<td rowspan="3" class="CS2550">CS-2550</td>
 					<td rowspan="3" class="CS1410">CS-1410</td>
-					<td rowspan="2" class="CS2550">CS-2550</td>
+					<td rowspan="3" class="CS2550">CS-2550</td>
 					<td rowspan="3" class="CS1410">CS-1410</td>
-					<td rowspan="2" class="CS2550">CS-2550</td>
+					<td rowspan="3" class="CS2550">CS-2550</td>
 				</tr>
 				<tr>
 					<th class="time-slot">17:00</th>
-
 				</tr>
 				<tr>
 					<th class="time-slot">18:00</th>
-					<td>-break-</td>
-					<td>-break-</td>
-					<td>-break-</td>
-
 				</tr>
 				<tr>
 					<th class="time-slot">19:00</th>
-					<td rowspan="2" class="CS1410">CS-1410</td>
 					<td>-break-</td>
-					<td rowspan="2" class="CS1410">CS-1410</td>
 					<td>-break-</td>
-					<td rowspan="2" class="CS1410">CS-1410</td>
-
+					<td>-break-</td>
+					<td>-break-</td>
+					<td>-break-</td>
 				</tr>
 				<tr>
 					<th class="time-slot">20:00</th>
-
+					<td rowspan="2" class="CS1410">CS-1410</td>
+					<td rowspan="2" class="CS2550">CS-2550</td>
+					<td rowspan="2" class="CS1410">CS-1410</td>
+					<td rowspan="2" class="CS2550">CS-2550</td>
+					<td rowspan="2" class="CS1410">CS-1410</td>					
 				</tr>
 				<tr>
 					<th class="time-slot">21:00</th>
-
 				</tr>
 				<tr>
 					<th class="time-slot">22:00</th>
-
+					<td>Snack Time!</td>
+					<td>Snack Time!</td>
+					<td>Snack Time!</td>
+					<td>Snack Time!</td>
+					<td>Snack Time!</td>
 				</tr>
 				<tr>
 					<th class="time-slot">23:00</th>
-
+					<td rowspan="6" class="Valorant">Play Valorant</td>
+					<td rowspan="6" class="Valorant">Play Valorant</td>
+					<td rowspan="6" class="Valorant">Play Valorant</td>
+					<td rowspan="6" class="Valorant">Play Valorant</td>
+					<td rowspan="6" class="Valorant">Play Valorant</td>
 				</tr>
 				<tr>
 					<th class="time-slot">00:00</th>
@@ -158,33 +140,31 @@ TRICK:  select all text in this file, 'Ctrl-A', then use 'Alt-Shift-f' to format
 				</tr>
 				<tr>
 					<th class="time-slot">2:00</th>
-
 				</tr>
 				<tr>
 					<th class="time-slot">3:00</th>
-
 				</tr>
 				<tr>
 					<th class="time-slot">4:00</th>
-
 				</tr>
 				<tr>
 					<th class="time-slot">5:00</th>
-
+					<td>Regret playing too much Valorant</td>
+					<td>Regret playing too much Valorant</td>
+					<td>Regret playing too much Valorant</td>
+					<td>Regret playing too much Valorant</td>
+					<td>Regret playing too much Valorant</td>
 				</tr>
 				<tr>
 					<th class="time-slot">6:00</th>
-
+					<td>Crash from exhaustion</td>
+					<td>Crash from exhaustion</td>
+					<td>Crash from exhaustion</td>
+					<td>Crash from exhaustion</td>
+					<td>Crash from exhaustion</td>
 				</tr>
 			</table>
 		</section>
 	</main>
-	<!-- (Project 2) include your javascript file here -->
-	<script src="js/main.js"></script>
-	<script type="text/javascript">
-	//Project 2- you can call javascript functions when page is loaded here.
-    //helloWorld();  //function contained in js/main.js file
-	</script>
 </body>
-
 </html>
