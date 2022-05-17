@@ -1,0 +1,13 @@
+
+/* WARNING-Please do not copy/paste any of this code.  You may utilize the concepts here 
+but I don't want to see a bunch of assignments with the exact layout, class names etc.  
+Type every line of code yourself!  Make the assignment your own.*/
+body{
+	/*border-box style of box-sizing makes it so both width and padding of a block element are included
+	in the total width of the element.  This is preferred going forward */
+	box-sizing: border-box;
+}
+.res-section {
+	color:black;
+	/*Project 2-use this css rule to format each 'section' tag with 'res-section' class assigned */
+}
