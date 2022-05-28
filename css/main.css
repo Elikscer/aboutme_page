@@ -7,14 +7,16 @@ body{
 	color: #d0d1cd;
 }
 header {
-	width: 100%;
-	height: 65px;
+	width: 70%;
+	height: 45%;
 	background-color: #1a2430;
 	border: solid 2px #303847;
-	display: block;
-	position: sticky;
-	margin: 0px;
+	margin: auto;
 	border-radius: 15px;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	grid-column-start: 1;
+	grid-column-end: 2;
 }
 main {
 	display: grid;
@@ -32,8 +34,8 @@ main {
 	box-shadow: 0px 2px 2px #303847, 0px 0px 5px #303847;
 }
 h1 {
-	text-align: left;
-	padding-left: 10px;
+	text-align: center;
+	padding: 10px;
 	margin: auto;
 	color: #d0d1cd;
 	font-family: 'Lovers Quarrel', cursive;
@@ -58,6 +60,7 @@ img {
 }
 #portrait {
 	margin: auto;
+	margin-top: 150px;
 	border-radius: 50%;
 	background-color: #1a2430;
 	grid-column-start: 1;
