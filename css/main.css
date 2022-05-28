@@ -3,9 +3,18 @@ html {
 	background-image: linear-gradient(to bottom right, #303847, #8a8c83);
 }
 body{
-	box-sizing: border-box;
 	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	color: #d0d1cd;
+}
+header {
+	width: 100%;
+	height: 65px;
+	background-color: #1a2430;
+	border: solid 2px #303847;
+	display: block;
+	position: sticky;
+	margin: 0px;
+	border-radius: 15px;
 }
 main {
 	display: grid;
@@ -23,14 +32,25 @@ main {
 	box-shadow: 0px 2px 2px #303847, 0px 0px 5px #303847;
 }
 h1 {
-	text-align: center;
+	text-align: left;
+	padding-left: 10px;
 	margin: auto;
-	padding: 10px 10px 20px 10px;
-	grid-column-start: 1;
-	grid-column-end: 2;
-	grid-row-start: 1;
-	grid-row-end: 2;
 	color: #d0d1cd;
+	font-family: 'Lovers Quarrel', cursive;
+	font-size: 60pt;
+	text-decoration: none;
+	font-weight: normal;
+}
+h1:hover {
+	animation: sway 4s infinite;
+	animation-timing-function: linear;
+}
+@keyframes sway {
+	0% { transform: scale(1) rotate(0.5deg) translate(2px, 0); }
+	25% { transform: scale(1.01) rotate(0deg) translate(0px, 0); }
+	50% { transform: scale(1) rotate(-0.5deg) translate(-2px, 0); }
+	75% { transform: scale(1.01) rotate(0deg) translate(0px, 0); }
+	100% { transform: scale(1) rotate(0.5deg) translate(2px, 0); }
 }
 img {
 	border: 5px solid #96988f;
@@ -38,12 +58,11 @@ img {
 }
 #portrait {
 	margin: auto;
-	margin-top: 20px;
 	border-radius: 50%;
 	background-color: #1a2430;
 	grid-column-start: 1;
   	grid-column-end: 2;
-  	grid-row-start: 2;
+  	grid-row-start: 1;
   	grid-row-end: 4;
 }
 #center-info {
@@ -58,6 +77,7 @@ img {
 }
 #poem-text {
 	text-align: center;
+	font-family: 'Tiro Devanagari Sanskrit', serif;
 }
 #cat {
 	text-align: center;
@@ -85,6 +105,7 @@ a:hover{
 #personal-interests {
 	margin: auto;
 	margin-top: 0px;
+	margin-right: 10px;
 	grid-column-start: 1;
 	grid-column-end: 2;
 	grid-row-start: 5;
@@ -101,7 +122,7 @@ a:hover{
 }
 #class-schedule {
 	margin: auto;
-	width: auto;
+	width: 95%;
 	grid-column-start: 2;
 	grid-column-end: 4;
 	grid-row-start: 5;
@@ -116,6 +137,7 @@ table {
 	border-collapse: collapse;
 	text-align: center;
 	table-layout: fixed;
+	padding: 20px;
 }
 td, th{
 	text-align: center;
@@ -135,6 +157,16 @@ td.CS1410 {
 }
 td.Valorant {
 	background-color: #85453C;
+}
+td.crash {
+	background-color: #96988f;
+}
+td.snack {
+	background-color: #7892ad;
+}
+td.regret {
+	background-color: #d0d1cd;
+	color: #303847;
 }
 #separator {
 	grid-row-start: 4;
