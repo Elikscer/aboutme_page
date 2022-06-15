@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- EXAMPLE CODE HEADER/DISCLAIMER
- 
-Project:  Project 1 - About Me
+<!--
+
+Project:  Project 3 - Responsive Web Site
 Name: Eli Durfee
-Submitted: 05/17/22
+Submitted: ??/??/????
  
 I declare that the following source code was written by me, or provided
 by the instructor for this project. I understand that copying source
@@ -13,166 +13,238 @@ I acknowledge that  If I am found in violation of this policy this may result
 in a zero grade, a permanent record on file and possibly immediate failure of the class.
  
 Reflection (1-2 paragraphs):  
-I had a lot of fun writing this webpage and learned a lot about tables and formatting 
-tables since I'd never really used them before.
-I also hadn't used CSS grids previously, as most of my web programming experience was 
-previous to 2017 and it wasn't really an option.  What I was used to doing for a grid-like 
-layout was importing bootstrap for its flexible grid layouts.  
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 -->
 
 <html lang="en">
 <head>
-	<title>About Eli Durfee</title>
+	<title>Eli Durfee</title>
 	<meta charset="utf-8">
-	<style>
-	</style>
-	<link rel="stylesheet" href="css/main.css" />
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet"></head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">	<link rel="stylesheet" href="test.css" />
+    <link rel="icon" type="image/x-icon" href="img/icon.ico">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <link type="text/css" rel="stylesheet" href="css/altTheme.css">
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
 <body>
-	<main>
-		<header>
-			<h1>Eli Durfee</h1>
-		</header>
-		<img src="img/portrait.jpg" alt="Portrait of Eli Durfee" id="portrait">
-		<div id='center-info'>
-			<section class='res-section'>
-				<h2>Personal Info</h2>
-				<ul>
-					<li><b>Major:</b> Computer Science</li>
-					<li><b>High School:</b> N/A, earned GED in 2017</li>
-					<li><b>Current year at UVU:</b> Freshman</li>
-					<li><b>Favorite Ice Cream Flavor:</b> Goat's Milk</li>
-				</ul>
-			</section>
-			<section class='res-section'>
-				<h2>My Five Favorite Books</h2>
-				<ol>
-					<li><i>Brave New World</i>, <a href="https://www.huxley.net">Aldous Huxley</a></li>
-					<li><i>Ender's Shadow</i>, <a href="http://www.hatrack.com/">Orson Scott Card</a></li>
-					<li><i>Harry Potter</i>, <a href="https://www.jkrowling.com/">J.K. Rowling</a></li>
-					<li><i>The Rithmatist</i>, <a href="https://www.brandonsanderson.com">Brandon Sanderson</a></li>
-					<li><i>Frankenstein</i>, <a href="http://shelleygodwinarchive.org">Mary Shelley</a></li>
-				</ol>
-			</section>
-			<section class='res-section'>
-				<h2>Resilience: A Haiku</h2>
-				<p id="poem-text"><i>The yielding tree bends<br>
-					It sways in the wind and rain<br>
-					When rigid walls fall</i></p>
-				<p>This is the reminder I must constantly give myself: that freedom and survival are not the outcome of stubbornness, but of flexibility and openness.</p>
-			</section>
-		</div>
-		<section id="cat">
-			<h2>My Cat, Ender &darr;</h2>
-			<img src="img/cat.png" alt="Picture of my cat">
-			<p>...because I have to take every opportunity to show off pictures of my cat.</p>
-		</section>
-		<section class="res-section" id="fun-fact">
-			<p><b>Fun Fact:</b> I have a Commercial Driver's License</p>
-		</section>
-		<div id="separator"></div>
-		<section class="res-section" id="personal-interests">
-			<h2>My Personal Interests</h2>
-			<p>I thoroughly enjoy video games of many varieties, and very likely spend more time gaming than is healthy.  My favorite games generally fall into the genres of RPG (Role-Playing Game), MOBA (Multiplayer Online Battle Arena), and Strategy/Puzzle.  My favorite RPG is either Skyrim or Cyperpunk 2077, my favorite MOBA is League of Legends, and my favorite puzzle game is Portal 2.  I've been playing a lot of Valorant lately as well, which, as an FPS (First-Person Shooter) is a bit unusual for me... but it's been a lot of fun.  I also play board games with my friends, and card games such as Magic: The Gathering or Flesh & Blood.</p>
-			<p>Another interest of mine is art.  I love to doodle and have many sketchbooks full of my art.  I have a drawing tablet that I'm using to try to learn digital illustration, as well.  Most of my drawings are of my favorite League of Legends character, Evelynn.</p>
-			<p>Lastly, I love music.  I am not very skilled at any instruments since I no longer practice regularly, but there was a time when I played piano, viola, cello, guitar, and electric bass.  My favorite band is Carbon Leaf, a folk rock group from the East coast.</p>
-		</section>
-		<section class="res-section" id="class-schedule">
-			<table>
-				<tr>
-					<th></th>
-					<th>Monday</th>
-					<th>Tuesday</th>
-					<th>Wednesday</th>
-					<th>Thursday</th>
-					<th>Friday</th>
-				</tr>
-				<tr>
-					<th class="time-slot">16:00</th>
-					<td rowspan="3" class="CS2550">CS-2550</td>
-					<td rowspan="3" class="CS1410">CS-1410</td>
-					<td rowspan="3" class="CS2550">CS-2550</td>
-					<td rowspan="3" class="CS1410">CS-1410</td>
-					<td rowspan="3" class="CS2550">CS-2550</td>
-				</tr>
-				<tr>
-					<th class="time-slot">17:00</th>
-				</tr>
-				<tr>
-					<th class="time-slot">18:00</th>
-				</tr>
-				<tr>
-					<th class="time-slot">19:00</th>
-					<td>-break-</td>
-					<td>-break-</td>
-					<td>-break-</td>
-					<td>-break-</td>
-					<td>-break-</td>
-				</tr>
-				<tr>
-					<th class="time-slot">20:00</th>
-					<td rowspan="2" class="CS1410">CS-1410</td>
-					<td rowspan="2" class="CS2550">CS-2550</td>
-					<td rowspan="2" class="CS1410">CS-1410</td>
-					<td rowspan="2" class="CS2550">CS-2550</td>
-					<td rowspan="2" class="CS1410">CS-1410</td>					
-				</tr>
-				<tr>
-					<th class="time-slot">21:00</th>
-				</tr>
-				<tr>
-					<th class="time-slot">22:00</th>
-					<td class="snack">Snack Time!</td>
-					<td class="snack">Snack Time!</td>
-					<td class="snack">Snack Time!</td>
-					<td class="snack">Snack Time!</td>
-					<td class="snack">Snack Time!</td>
-				</tr>
-				<tr>
-					<th class="time-slot">23:00</th>
-					<td rowspan="6" class="Valorant">Play Valorant</td>
-					<td rowspan="6" class="Valorant">Play Valorant</td>
-					<td rowspan="6" class="Valorant">Play Valorant</td>
-					<td rowspan="6" class="Valorant">Play Valorant</td>
-					<td rowspan="6" class="Valorant">Play Valorant</td>
-				</tr>
-				<tr>
-					<th class="time-slot">00:00</th>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img id="logo" src="img/elikscerlogo.png" alt="Elikscer Logo">
+            </div>
+            <nav>
+                <h1>Eli Durfee</h1>
+                <ul class="menu">
+                    <li><a href="javascript:changePage('home')">Home</a></li>
+                    <li><a href="javascript:changePage('portfolio')">Portfolio</a></li>
+                    <li><a href="javascript:changePage('about')">About</a></li>
+                    <li><a href="javascript:changePage('contact')">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="info">
+                <div class="horizontal-line"></div>
+                <h2>Artist & Developer</h2>
+            </div>
+        </header>
 
-				</tr>
-				<tr>
-					<th class="time-slot">1:00</th>
-				</tr>
-				<tr>
-					<th class="time-slot">2:00</th>
-				</tr>
-				<tr>
-					<th class="time-slot">3:00</th>
-				</tr>
-				<tr>
-					<th class="time-slot">4:00</th>
-				</tr>
-				<tr>
-					<th class="time-slot">5:00</th>
-					<td class="regret">Regret playing too much Valorant</td>
-					<td class="regret">Regret playing too much Valorant</td>
-					<td class="regret">Regret playing too much Valorant</td>
-					<td class="regret">Regret playing too much Valorant</td>
-					<td class="regret">Regret playing too much Valorant</td>
-				</tr>
-				<tr>
-					<th class="time-slot">6:00</th>
-					<td class="crash">Crash from exhaustion</td>
-					<td class="crash">Crash from exhaustion</td>
-					<td class="crash">Crash from exhaustion</td>
-					<td class="crash">Crash from exhaustion</td>
-					<td class="crash">Crash from exhaustion</td>
-				</tr>
-			</table>
-		</section>
-	</main>
+
+        <section class="home content-container">
+            <div class="res-section content-1">
+                <h2>Headline 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor posuere ac ut consequat semper viverra. Sit amet dictum sit amet. Dolor sit amet consectetur adipiscing. Eget gravida cum sociis natoque penatibus et magnis dis. Ullamcorper eget nulla facilisi etiam. Netus et malesuada fames ac turpis. Nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis. Iaculis eu non diam phasellus vestibulum lorem sed risus ultricies. Enim facilisis gravida neque convallis a cras semper auctor. Sed ullamcorper morbi tincidunt ornare massa eget egestas. Eget lorem dolor sed viverra ipsum nunc. Amet mattis vulputate enim nulla aliquet porttitor lacus. Tempus egestas sed sed risus. Quis vel eros donec ac odio tempor. Pharetra sit amet aliquam id diam maecenas ultricies. Sed tempus urna et pharetra pharetra massa. Neque vitae tempus quam pellentesque nec nam.</p>
+                <p>Odio pellentesque diam volutpat commodo sed. Elementum integer enim neque volutpat ac. Rhoncus aenean vel elit scelerisque mauris pellentesque. Tellus rutrum tellus pellentesque eu tincidunt. Eget nulla facilisi etiam dignissim diam. Diam in arcu cursus euismod quis viverra nibh. Ullamcorper dignissim cras tincidunt lobortis feugiat. Faucibus in ornare quam viverra. Nunc congue nisi vitae suscipit tellus mauris. Erat velit scelerisque in dictum non. Aliquet nibh praesent tristique magna sit. Feugiat in fermentum posuere urna nec tincidunt. In hac habitasse platea dictumst quisque. Accumsan lacus vel facilisis volutpat est velit egestas dui. Laoreet sit amet cursus sit amet dictum. Mi eget mauris pharetra et. Cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Sit amet volutpat consequat mauris nunc congue.</p>
+                <p>Malesuada proin libero nunc consequat interdum. Tristique magna sit amet purus. Eget mi proin sed libero enim sed. Auctor urna nunc id cursus metus aliquam eleifend mi in. Pellentesque id nibh tortor id aliquet lectus proin nibh nisl. Nunc scelerisque viverra mauris in aliquam. Feugiat sed lectus vestibulum mattis. Sed risus pretium quam vulputate dignissim suspendisse in est ante. Amet venenatis urna cursus eget nunc scelerisque viverra. Eget est lorem ipsum dolor sit.</p>
+            </div>
+            <div class="portrait-container">
+                <img id="portrait" src="img/portrait.jpg" alt="Portrait of Eli Durfee">
+            </div>
+            <div class="res-section content-2">
+                <h2>Headline 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Gravida cum sociis natoque penatibus et magnis dis. Risus feugiat in ante metus. Senectus et netus et malesuada fames ac turpis egestas. Aliquet enim tortor at auctor. Morbi quis commodo odio aenean sed. Integer enim neque volutpat ac tincidunt vitae semper. Ut consequat semper viverra nam. Laoreet sit amet cursus sit amet. Habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Vitae semper quis lectus nulla at volutpat diam ut venenatis. Massa eget egestas purus viverra. Maecenas accumsan lacus vel facilisis volutpat. Purus ut faucibus pulvinar elementum integer. Cras adipiscing enim eu turpis. Ultrices in iaculis nunc sed. Arcu risus quis varius quam quisque id. A lacus vestibulum sed arcu non odio euismod. Arcu dictum varius duis at consectetur. Et pharetra pharetra massa massa ultricies mi quis hendrerit. Diam quam nulla porttitor massa id neque aliquam vestibulum. Sit amet nisl suscipit adipiscing bibendum est ultricies integer quis. Eget egestas purus viverra accumsan in nisl. Pulvinar pellentesque habitant morbi tristique senectus et. Vulputate odio ut enim blandit volutpat. Urna neque viverra justo nec ultrices dui sapien. Feugiat pretium nibh ipsum consequat nisl vel pretium lectus. In tellus integer feugiat scelerisque varius. Et malesuada fames ac turpis egestas sed. Accumsan tortor posuere ac ut. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et. In cursus turpis massa tincidunt. Turpis egestas maecenas pharetra convallis posuere morbi.</p>
+            </div>
+        </section>
+
+
+        <section class="portfolio content-container">
+            <h2>Portfolio</h2>
+            <div class="res-section youtube">
+                <h2>Behold This YouTube Video</h2>
+                <iframe id="lol-video" width="560" height="315" src="https://www.youtube.com/embed/j39JZ3pm5WU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>I edited it for length and redid the auto for a digital media class.</p>
+            </div>
+        </section>
+
+
+        <section class="about">
+            <div class="content-container about-content">
+                <div id="about-heading">
+                    <h2>About Eli</h2>
+                    <img src="img/portrait.jpg" alt="Portrait of Eli Durfee" id="portrait">
+                </div>
+                <div id='center-info'>
+                    <div class='res-section'>
+                        <h2>Personal Info</h2>
+                        <ul>
+                            <li><b>Major:</b> Computer Science</li>
+                            <li><b>High School:</b> N/A, earned GED in 2017</li>
+                            <li><b>Current year at UVU:</b> Freshman</li>
+                            <li><b>Favorite Ice Cream Flavor:</b> Goat's Milk</li>
+                        </ul>
+                    </div>
+                    <div class='res-section'>
+                        <h2>My Five Favorite Books</h2>
+                        <ol>
+                            <li><i>Brave New World</i>, <a href="https://www.huxley.net">Aldous Huxley</a></li>
+                            <li><i>Ender's Shadow</i>, <a href="http://www.hatrack.com/">Orson Scott Card</a></li>
+                            <li><i>Harry Potter</i>, <a href="https://www.jkrowling.com/">J.K. Rowling</a></li>
+                            <li><i>The Rithmatist</i>, <a href="https://www.brandonsanderson.com">Brandon Sanderson</a></li>
+                            <li><i>Frankenstein</i>, <a href="http://shelleygodwinarchive.org">Mary Shelley</a></li>
+                        </ol>
+                    </div>
+                    <div class='res-section'>
+                        <h2>Resilience: A Haiku</h2>
+                        <p id="poem-text"><i>The yielding tree bends<br>
+                            It sways in the wind and rain<br>
+                            When rigid walls fall</i></p>
+                        <p>This is the reminder I must constantly give myself: that freedom and survival are not the outcome of stubbornness, but of flexibility and openness.</p>
+                    </div>
+                </div>
+                <div>
+                    <figure id="cat">
+                        <h2>My Cat, Ender &darr;</h2>
+                        <img src="img/cat.png" alt="Picture of my cat">
+                        <figcaption>...because I have to take every opportunity to show off pictures of my cat.</figcaption>
+                    </figure>
+                    <div class="res-section" id="fun-fact">
+                        <p><b>Fun Fact:</b> I have a Commercial Driver's License</p>
+                    </div>
+                </div>
+                <div class="bot-content">
+                    <div class="res-section" id="personal-interests">
+                        <h2>My Personal Interests</h2>
+                        <p>I thoroughly enjoy video games of many varieties, and very likely spend more time gaming than is healthy.  My favorite games generally fall into the genres of RPG (Role-Playing Game), MOBA (Multiplayer Online Battle Arena), and Strategy/Puzzle.  My favorite RPG is either Skyrim or Cyperpunk 2077, my favorite MOBA is League of Legends, and my favorite puzzle game is Portal 2.  I've been playing a lot of Valorant lately as well, which, as an FPS (First-Person Shooter) is a bit unusual for me... but it's been a lot of fun.  I also play board games with my friends, and card games such as Magic: The Gathering or Flesh & Blood.</p>
+                        <p>Another interest of mine is art.  I love to doodle and have many sketchbooks full of my art.  I have a drawing tablet that I'm using to try to learn digital illustration, as well.  Most of my drawings are of my favorite League of Legends character, Evelynn.</p>
+                        <p>Lastly, I love music.  I am not very skilled at any instruments since I no longer practice regularly, but there was a time when I played piano, viola, cello, guitar, and electric bass.  My favorite band is Carbon Leaf, a folk rock group from the East coast.</p>
+                    </div>
+                    <div class="res-section" id="class-schedule">
+                        <table>
+                            <caption>My Weekly Schedule</caption>
+                            <tr>
+                                <th></th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                            </tr>
+                            <tr>
+                                <th class="time-slot">16:00</th>
+                                <td rowspan="3" class="CS2550">CS-2550</td>
+                                <td rowspan="3" class="CS1410">CS-1410</td>
+                                <td rowspan="3" class="CS2550">CS-2550</td>
+                                <td rowspan="3" class="CS1410">CS-1410</td>
+                                <td rowspan="3" class="CS2550">CS-2550</td>
+                            </tr>
+                            <tr>
+                                <th class="time-slot">17:00</th>
+                            </tr>
+                            <tr>
+                                <th class="time-slot">18:00</th>
+                            </tr>
+                            <tr>
+                                <th class="time-slot">19:00</th>
+                                <td>-break-</td>
+                                <td>-break-</td>
+                                <td>-break-</td>
+                                <td>-break-</td>
+                                <td>-break-</td>
+                            </tr>
+                            <tr>
+                                <th class="time-slot">20:00</th>
+                                <td rowspan="2" class="CS1410">CS-1410</td>
+                                <td rowspan="2" class="CS2550">CS-2550</td>
+                                <td rowspan="2" class="CS1410">CS-1410</td>
+                                <td rowspan="2" class="CS2550">CS-2550</td>
+                                <td rowspan="2" class="CS1410">CS-1410</td>					
+                            </tr>
+                            <tr>
+                                <th class="time-slot">21:00</th>
+                            </tr>
+                            <tr>
+                                <th class="time-slot">22:00</th>
+                                <td class="snack">Snack Time!</td>
+                                <td class="snack">Snack Time!</td>
+                                <td class="snack">Snack Time!</td>
+                                <td class="snack">Snack Time!</td>
+                                <td class="snack">Snack Time!</td>
+                            </tr>
+                            <tr>
+                                <th class="time-slot">23:00</th>
+                                <td rowspan="6" class="Valorant">Play Valorant</td>
+                                <td rowspan="6" class="Valorant">Play Valorant</td>
+                                <td rowspan="6" class="Valorant">Play Valorant</td>
+                                <td rowspan="6" class="Valorant">Play Valorant</td>
+                                <td rowspan="6" class="Valorant">Play Valorant</td>
+                            </tr>
+                            <tr>
+                                <th class="time-slot">00:00</th>
+
+                            </tr>
+                            <tr>
+                                <th class="time-slot">1:00</th>
+                            </tr>
+                            <tr>
+                                <th class="time-slot">2:00</th>
+                            </tr>
+                            <tr>
+                                <th class="time-slot">3:00</th>
+                            </tr>
+                            <tr>
+                                <th class="time-slot">4:00</th>
+                            </tr>
+                            <tr>
+                                <th class="time-slot">5:00</th>
+                                <td class="regret">Regret playing too much Valorant</td>
+                                <td class="regret">Regret playing too much Valorant</td>
+                                <td class="regret">Regret playing too much Valorant</td>
+                                <td class="regret">Regret playing too much Valorant</td>
+                                <td class="regret">Regret playing too much Valorant</td>
+                            </tr>
+                            <tr>
+                                <th class="time-slot">6:00</th>
+                                <td class="crash">Crash from exhaustion</td>
+                                <td class="crash">Crash from exhaustion</td>
+                                <td class="crash">Crash from exhaustion</td>
+                                <td class="crash">Crash from exhaustion</td>
+                                <td class="crash">Crash from exhaustion</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="contact">
+            <h2>Contact Me</h2>
+            <div class="res-section contact-info">
+                <p>email: <a href="mailto:durfeeeli@gmail.com">durfeeeli@gmail.com</a></p>
+                <p>phone: (123) 456-7890</p>
+            </div>
+        </section>
+
+
+    </div>
+    <footer>
+        <p>This is a footer. I made this footer.</p>
+        <p>Eli Durfee 2022</p>
+        <button type="button" onclick="changeCss()">Toggle Alternative Site Theme</button>
+    </footer>
+
 </body>
 </html>

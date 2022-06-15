@@ -1,0 +1,96 @@
+html{
+    background-color: var(--lightest);
+    background-image: none;
+}
+
+*, a {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+h1, h2, h3, h4, h5, caption, figcaption{
+    color: var(--darkest);
+    font-family: 'Times New Roman', Times, serif;
+}
+.contact h2{
+    color: var(--darkest);
+}
+.portfolio h2 {
+    font-weight: normal;
+    color: var(--darkest);
+
+}
+header h1, h2 {
+    color: var(--lightest);
+    font-weight: bold;
+}
+
+.res-section, #portrait {
+    background-color: var(--lightTransparent);
+    box-shadow: none;
+    border-radius: 0px;
+}
+
+header {
+    background-color: var(--darkTone);
+    grid-template-areas: 
+        "logo info"
+        "logo nav";
+}
+
+.horizontal-line {
+    order: 2;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: var(--darkTone);
+    color: var(--lightest);
+}
+
+footer * {
+    color: var(--lightest);
+}
+.content-1 {
+    order: 3;
+}
+.portrait-container {
+    order: 2;
+}
+.content-2 {
+    order: 1;
+}
+.menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 200px;
+}
+.menu li a {
+    font-size: 24px;
+}
+nav {
+    align-items: center;
+    align-content: flex-start;
+    justify-content: space-between;
+}
+nav h1 {
+    margin-top: 0;
+}
+
+#cat img{
+    box-shadow: none;
+}
+#cat h2, figcaption {
+    color: var(--darkest);
+}
+#cat figcaption {
+    background-color: var(--midTone);
+}
+.about #portrait, #cat img {
+    border-radius: 0px;
+}
