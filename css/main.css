@@ -6,6 +6,8 @@
     --midTone: #89A194;
     --darkTone: #004234;
 
+    --error: #bd3402;
+
     --lightTransparent: rgba(217, 227, 196, 0.5);
     --grayTransparent: rgba(138, 140, 131, 0.5)
 }
@@ -73,7 +75,13 @@ nav * {
 h1 {
     font-size: 50px;
     white-space: nowrap;
-    line-height: 10px;
+}
+.icon {
+    display: none;
+    margin-left: 3px;
+}
+svg {
+    fill: var(--lightest);
 }
 .menu {
     display: flex;
@@ -85,6 +93,9 @@ h1 {
     margin-top: 5px;
     padding: 0;
 }
+.menu * {
+    white-space: nowrap;
+}
 nav a {
     color: var(--lightest);
     text-decoration: none;
@@ -94,6 +105,8 @@ nav a:hover {
 }
 .info {
     grid-area: info;
+    display: flex;
+    flex-direction: column;
 }
 .horizontal-line {
     background-color: var(--lightest);
@@ -335,6 +348,8 @@ td.regret {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 100%;
+    margin: 5px;
 }
 .portfolio, .contact h2, h2{
     color: var(--lightest);
@@ -348,32 +363,182 @@ td.regret {
 .contact-info {
     width: auto;
 }
+.visitor-log h2 {
+    margin: auto;
+    text-align: center;
+}
+form {
+  max-width: 400px;
+}
+.errorMsg {
+  color: var(--error);
+}
+input.was-validated:invalid {
+  color: var(--error);
+  border: 2px solid var(--error);
+}
+input.was-validated:invalid ~ div.errorMsg {
+  display: block;
+}
+input:valid ~ div.errorMsg, input:invalid ~ div.errorMsg {
+  display: none;
+}
+.visitor-log {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.form-container {
+    margin: auto;
+    display: block;
+}
+.form-container * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.flex {
+  list-style-type: none;
+  padding: 0;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.flex li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-start;
+}
+.flex li li input,
+.flex li textarea {
+  padding: 5px;
+  font: normal 16px/1.5 sans-serif;
+  border-radius: 3px;
+}
+.flex button {
+  margin: auto;
+  padding: 22px 46px;
+  font: normal 22px/1.5 sans-serif;
+  border: none;
+  background: var(--lightTransparent);
+  color: var(--darkest);
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 4px;
+}
+.flex > li {
+  margin-bottom: 20px;
+}
+.flex > li > label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 10px;
+          flex: 1 0 10px;
+  max-width: 200px;
+}
+.flex > li + * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 200px;
+          flex: 1 0 200px;
+}
+.flex > input[type='radio'] ~ div.errorMsg,
+.flex > input[type='checkbox'] ~ div.errorMsg {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 350px;
+          flex: 1 0 350px;
+  text-align: right;
+}
+.flex input {
+    border: 2px solid var(--lightTransparent);
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 16px;
+}
+.comment-box {
+    flex-direction: column;
+}
+#myform {
+    margin-top: 20px;
+}
+.flex h2 {
+    margin-bottom: 10px;
+}
+#comment {
+    width: 100%;
+}
+.errorMsg {
+    flex-basis: 100%;
+}
+.successMsg {
+    margin: auto;
+    text-align: center;
+}
+ 
 
 
 
 
 
-
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 525px) {
     .logo-container {
         display: none;
     }
+    header {
+        padding-left: 15px;
+    }
+    iframe {
+        width: auto;
+    }
+    .flex li {
+        justify-content: flex-start;
+    }
 }
-@media screen and (max-width: 324px) {
+@media screen and (max-width: 420px) {
+    nav {
+        gap: 5px;
+    }
     .horizontal-line {
-        display: none;
+        order: 2;
+    }
+    .info > h2 {
+        order: 1;
+    }
+    .icon {
+        display: block;
     }
     .menu {
         flex-direction: column;
-        align-items: flex-start;
+    }
+    .menu * {
+        margin: auto;
+        margin-bottom: 5px;
+    }
+    .topnav {
+        display: none;
+        flex-basis: 100%;
+        background-color: var(--darkTone);
     }
 }
+@media screen and (max-width: 340px) {
+    .flex li {
+        flex-direction: column;
+    }
+    .how-found {
+        flex-direction: row !important;
+    }
+}
+
 
 
 .home {
     display: flex;
 }
-.portfolio, .about, .contact {
+.portfolio, .about, .contact, .visitor-log{
     display: none;
 }
 button {

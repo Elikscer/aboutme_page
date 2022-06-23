@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
 
-Project:  Project 3 - Responsive Web Site
+Project:  Project 5 - Personal Web Site - Visitor Form Validation - Refactor JS
 Name: Eli Durfee
 Submitted: ??/??/????
  
@@ -21,14 +21,14 @@ Reflection (1-2 paragraphs):
 <head>
 	<title>Eli Durfee</title>
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">	<link rel="stylesheet" href="test.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
     <link rel="icon" type="image/x-icon" href="img/icon.ico">
     <link type="text/css" rel="stylesheet" href="css/main.css">
-    <script
-  src="https://code.jquery.com/jquery-3.6.0.js"
-  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/inputMasking.js"></script>
+    <script type="text/javascript" src="js/validation.js"></script>
 </head>
 <body>
     <div class="container">
@@ -38,12 +38,22 @@ Reflection (1-2 paragraphs):
             </div>
             <nav>
                 <h1>Eli Durfee</h1>
-                <ul class="menu">
-                    <li><a href="javascript:changePage('home')">Home</a></li>
-                    <li><a href="javascript:changePage('portfolio')">Portfolio</a></li>
-                    <li><a href="javascript:changePage('about')">About</a></li>
-                    <li><a href="javascript:changePage('contact')">Contact</a></li>
-                </ul>
+                <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                    <svg viewBox="0 0 100 60" width="40" height="40">
+                        <rect width="100" height="20"></rect>
+                        <rect y="30" width="100" height="20"></rect>
+                        <rect y="60" width="100" height="20"></rect>
+                    </svg>
+                </a>
+                <div class="topnav">
+                    <ul class="menu">
+                        <li><a href="javascript:changePage('home')">Home</a></li>
+                        <li><a href="javascript:changePage('portfolio')">Portfolio</a></li>
+                        <li><a href="javascript:changePage('about')">About</a></li>
+                        <li><a href="javascript:changePage('contact')">Contact</a></li>
+                        <li><a href="javascript:changePage('visitor-log')">Log Visit</a></li>
+                    </ul>
+                </div>
             </nav>
             <div class="info">
                 <div class="horizontal-line"></div>
@@ -235,6 +245,95 @@ Reflection (1-2 paragraphs):
                 <p>email: <a href="mailto:durfeeeli@gmail.com">durfeeeli@gmail.com</a></p>
                 <p>phone: (123) 456-7890</p>
             </div>
+        </section>
+
+
+        <section class="visitor-log">
+            <div class="form-container, res-section">
+                <h2>Visitor Form</h2>
+                <div class="successMsg" style="display:none">
+                  Thank you for logging your visit!
+                </div>
+                <form id="myform" novalidate>
+                  <ul class="flex">
+                    <li class="section-display">
+                      <label for="first-name">First Name</label>
+                      <input type="text" id="first-name" name="first-name" 
+                            placeholder="ex: Jane" required>
+                      <div class="errorMsg">First Name is Required</div>
+                    </li>
+                    <li >
+                      <label for="last-name">Last Name</label>
+                      <input type="text"  id="last-name" name="last-name" 
+                            placeholder="ex: Smith" required>
+                      <div class="errorMsg">Last Name is Required</div>
+                    </li>
+                    <li >
+                      <label for="address">Address</label>
+                      <input class="address" type="text"  id="address" name="address" 
+                            placeholder="ex: 123 S Pinetree Ln" required>
+                      <div class="errorMsg">Address is Required</div>
+                    </li>
+                    <li >
+                      <label for="city">City</label>
+                      <input type="text"  id="city" name="city" 
+                            placeholder="ex: Salt Lake City" required>
+                      <div class="errorMsg">City is Required</div>
+                    </li>
+                    <li >
+                      <label for="state">State</label>
+                      <input type="text"  id="state"  name="state" maxlength="2"
+                            placeholder="ex: UT" required>
+                      <div class="errorMsg">State is Required</div>
+                    </li>
+                    <li >
+                      <label for="zip">Zip</label>
+                      <input class="zip" id="zip" name="zip" type="text" 
+                            placeholder="ex: 12345" required>
+                      <div class="errorMsg">You must enter a valid zip code</div>
+                    </li>
+                    <li >
+                      <label for="email">Email</label>
+                      <input type="text" id="email" name="email" 
+                            placeholder="ex: name@email.com" required>
+                      <div class="errorMsg">You must enter a valid email</div>
+                    </li>
+                    <li>
+                      <label for="phone">Phone</label>
+                      <input class="phone_us" type="phone" id="phone" 
+                            placeholder="ex: (123) 456-7890" required>
+                      <div class="errorMsg">You must enter a valid phone number</div>
+                    </li>
+                    <li class="how-found">
+                      <h3>How did you find my page?</h3>
+                    </li>
+                    <li class="how-found">
+                      <input type="checkbox" id='google' name='find-page' value="google">
+                      <label for="google">Google Search</label>
+                    </li>
+                    <li class="how-found">
+                      <input type="checkbox" id='friend' name='find-page' value="friend">
+                      <label for="friend">Friend</label>
+                    </li>
+                    <li class="how-found">
+                      <input type="checkbox" id='newspaper' name='find-page' value="newspaper">
+                      <label for="newspaper">News Paper</label>
+                      <!--NOte that I have added the errorMsg div under the 'newspaper' checkbox.  When marking this group as 'valid' or 'invalid' you can just call setElementValidity on this one element instead of all of them 
+                      -->
+                      <div class="errorMsg">You must check at least one</div>
+                    </li>
+                    
+                    <li class="comment-box">
+                      <label for="comment">Comments</label>
+                      <textarea rows="4" id="comment" placeholder="Enter your comments here"></textarea>
+                    </li>
+                    
+                    <li>
+                      <button id="formSubmit" type="submit">Send</button>
+                    </li>
+                  </ul>
+                </form>
+                </div>
         </section>
 
 

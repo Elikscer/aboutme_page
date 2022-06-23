@@ -1,19 +1,23 @@
 function changePage(targetPage) {
     if (targetPage == "home") {
         $target = $(".home");
-        $closing = [$(".portfolio"), $(".about"), $(".contact")];
+        $closing = [$(".portfolio"), $(".about"), $(".contact"), $(".visitor-log")];
     }
     else if (targetPage == "portfolio") {
         $target = $(".portfolio");
-        $closing = [$(".home"), $(".about"), $(".contact")];
+        $closing = [$(".home"), $(".about"), $(".contact"), $(".visitor-log")];
     }
     else if (targetPage == "about") {
         $target = $(".about");
-        $closing = [$(".portfolio"), $(".home"), $(".contact")];
+        $closing = [$(".portfolio"), $(".home"), $(".contact"), $(".visitor-log")];
     }
     else if (targetPage == "contact") {
         $target = $(".contact");
-        $closing = [$(".portfolio"), $(".about"), $(".home")];
+        $closing = [$(".portfolio"), $(".about"), $(".home"), $(".visitor-log")];
+    }
+    else if (targetPage == "visitor-log") {
+        $target = $(".visitor-log");
+        $closing = [$(".portfolio"), $(".about"), $(".home"), $(".contact")];
     }
     for (i = 0; i < $closing.length; i++) {
         $closing[i].css("display", "none");
@@ -41,5 +45,16 @@ function changeCss() {
     }
     else {
         addCss();
+    }
+}
+
+function toggleMenu() {
+    $menu = $(".topnav");
+    var display = $menu.css("display");
+    if (display === "block") {
+        $menu.css("display", "none");
+    } 
+    else {
+        $menu.css("display", "block");
     }
 }
