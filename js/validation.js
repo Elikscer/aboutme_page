@@ -130,7 +130,7 @@ function validatePhone(id, msg) {
     $el = $(id);
     let valid=false;
 
-    if ($el.val().length == 10) {
+    if ($el.val().length == 14) {
         valid=true;
     }
 
