@@ -102,7 +102,7 @@ function validateEmail(id, msg) {
     $el = $(id);
     let valid=false;
 
-    var constraint = new RegExp("^(.+)@(.+)$");
+    var constraint = new RegExp("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$");
 
     if (constraint.test($el.val())) {
         valid=true;
