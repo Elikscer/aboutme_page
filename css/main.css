@@ -363,6 +363,79 @@ td.regret {
 .contact-info {
     width: auto;
 }
+
+
+
+
+@media screen and (max-width: 525px) {
+    .logo-container {
+        display: none;
+    }
+    header {
+        padding-left: 15px;
+    }
+    iframe {
+        width: auto;
+    }
+    .flex li {
+        justify-content: flex-start;
+    }
+}
+@media screen and (max-width: 420px) {
+    nav {
+        gap: 5px;
+    }
+    .horizontal-line {
+        order: 2;
+    }
+    .info > h2 {
+        order: 1;
+    }
+    .icon {
+        display: block;
+    }
+    .menu {
+        flex-direction: column;
+    }
+    .menu * {
+        margin: auto;
+        margin-bottom: 5px;
+    }
+    .topnav {
+        display: none;
+        flex-basis: 100%;
+        background-color: var(--darkTone);
+    }
+}
+@media screen and (max-width: 340px) {
+    .flex li {
+        flex-direction: column;
+    }
+    .how-found {
+        flex-direction: row !important;
+    }
+}
+
+
+
+.home {
+    display: flex;
+}
+.portfolio, .about, .contact, .visitor-log{
+    display: none;
+}
+button {
+    background-color: var(--lightTransparent);
+    border: 2px solid var(--midTone);
+    color: var(--darkest);
+}
+
+
+
+/*
+ALL CSS BELOW THIS POINT IS NEW TO PROJECT 5, ADDED AS PART OF THE
+UPDATE TO CREATE A VISITOR LOG FORM
+*/
 .visitor-log h2 {
     margin: auto;
     text-align: center;
@@ -477,72 +550,4 @@ input:valid ~ div.errorMsg, input:invalid ~ div.errorMsg {
 .successMsg {
     margin: auto;
     text-align: center;
-}
- 
-
-
-
-
-
-@media screen and (max-width: 525px) {
-    .logo-container {
-        display: none;
-    }
-    header {
-        padding-left: 15px;
-    }
-    iframe {
-        width: auto;
-    }
-    .flex li {
-        justify-content: flex-start;
-    }
-}
-@media screen and (max-width: 420px) {
-    nav {
-        gap: 5px;
-    }
-    .horizontal-line {
-        order: 2;
-    }
-    .info > h2 {
-        order: 1;
-    }
-    .icon {
-        display: block;
-    }
-    .menu {
-        flex-direction: column;
-    }
-    .menu * {
-        margin: auto;
-        margin-bottom: 5px;
-    }
-    .topnav {
-        display: none;
-        flex-basis: 100%;
-        background-color: var(--darkTone);
-    }
-}
-@media screen and (max-width: 340px) {
-    .flex li {
-        flex-direction: column;
-    }
-    .how-found {
-        flex-direction: row !important;
-    }
-}
-
-
-
-.home {
-    display: flex;
-}
-.portfolio, .about, .contact, .visitor-log{
-    display: none;
-}
-button {
-    background-color: var(--lightTransparent);
-    border: 2px solid var(--midTone);
-    color: var(--darkest);
 }
