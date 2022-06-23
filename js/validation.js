@@ -63,6 +63,8 @@ function validateForm() {
     validateEmail("#email", "You must enter a valid email");
 
     validateZip("#zip", "You must enter a valid zip code")
+
+    validatePhone("#phone", "You must enter a valid phone number")
 }
 
 function validateState(id, msg){
@@ -116,6 +118,19 @@ function validateZip(id, msg) {
     let valid=false;
 
     if ($el.val().length > 4) {
+        valid=true;
+    }
+
+    setElementValidity(id, valid, msg);
+
+    return valid;
+}
+
+function validatePhone(id, msg) {
+    $el = $(id);
+    let valid=false;
+
+    if ($el.val().length == 10) {
         valid=true;
     }
 

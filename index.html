@@ -3,7 +3,7 @@
 
 Project:  Project 5 - Personal Web Site - Visitor Form Validation - Refactor JS
 Name: Eli Durfee
-Submitted: ??/??/????
+Submitted: 06/22/2022
  
 I declare that the following source code was written by me, or provided
 by the instructor for this project. I understand that copying source
@@ -248,6 +248,7 @@ Reflection (1-2 paragraphs):
         </section>
 
 
+        <!--Log Visit Section-->
         <section class="visitor-log">
             <div class="form-container, res-section">
                 <h2>Visitor Form</h2>
@@ -288,7 +289,7 @@ Reflection (1-2 paragraphs):
                     </li>
                     <li >
                       <label for="zip">Zip</label>
-                      <input class="zip" id="zip" name="zip" type="text" 
+                      <input class="zip" id="zip" name="zip" type="text" maxlength="5" pattern="[0-9]{5}"
                             placeholder="ex: 12345" required>
                       <div class="errorMsg">You must enter a valid zip code</div>
                     </li>
@@ -318,7 +319,7 @@ Reflection (1-2 paragraphs):
                     <li class="how-found">
                       <input type="checkbox" id='newspaper' name='find-page' value="newspaper">
                       <label for="newspaper">News Paper</label>
-                      <!--NOte that I have added the errorMsg div under the 'newspaper' checkbox.  When marking this group as 'valid' or 'invalid' you can just call setElementValidity on this one element instead of all of them 
+                      <!--Note that I have added the errorMsg div under the 'newspaper' checkbox.  When marking this group as 'valid' or 'invalid' you can just call setElementValidity on this one element instead of all of them 
                       -->
                       <div class="errorMsg">You must check at least one</div>
                     </li>
